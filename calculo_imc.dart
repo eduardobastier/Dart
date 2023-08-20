@@ -1,10 +1,6 @@
 import 'dart:io';
 
 main(){
-  //pegar o peso
-  //pegar a altura
-  //realizar calculo
-  //retorna imc
 
   print("=== Digite seu peso ===");
   var textPeso = stdin.readLineSync();
