@@ -1,7 +1,10 @@
 import 'dart:io';
 
 main(){
+calculoImc();
+}
 
+calculoImc(){
   print("=== Digite seu peso ===");
   var textPeso = stdin.readLineSync();
   var peso = double.parse(textPeso!);
@@ -26,5 +29,4 @@ main(){
   } else {
     print("Obesidade grau 3");
   }
-
 }
