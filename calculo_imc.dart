@@ -6,20 +6,26 @@ calculoImc();
 
 calculoImc(){
   print("=== Digite seu peso ===");
-  var textPeso = stdin.readLineSync();
-  var peso = double.parse(textPeso!);
+  String? textPeso = stdin.readLineSync();
+  double?  peso = double.tryParse(textPeso!);
 
+if (peso != null){
   print("=== Digite sua altura ===");
-  var textAltura = stdin.readLineSync();
-  var altura = double.parse(textAltura!);
+  String? textAltura = stdin.readLineSync();
+  double? altura = double.tryParse(textAltura!);
 
-  var calcImc = peso / (altura * altura);
-  
+if (altura != null){
+  double calcImc = peso / (altura * altura);  
   imprimirResultado(calcImc);
+  } else {
+      print("Altura inválida.");
+    }
+  } else {
+    print("Peso inválido.");
+  }
 }
 
 imprimirResultado(calcImc){
-  
     print("===========================");
 
   if(calcImc < 18.5){
