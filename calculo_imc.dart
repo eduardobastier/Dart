@@ -28,15 +28,19 @@ if (altura != null){
 imprimirResultado(calcImc){
     print("===========================");
 
-  if(calcImc < 18.5){
-    print("Abaixo do peso");
-  } else if(calcImc > 18.5 && calcImc < 24.9){
+  if (calcImc < 16){
+    print("Magreza grave");
+  } else if(calcImc >= 16 && calcImc <17){
+    print("Magreza moderada");
+  } else if(calcImc >= 17 && calcImc <18.5){
+    print("Magreza leve");
+  } else if(calcImc >= 18.5 && calcImc < 25){
     print("Peso normal");
-  } else if(calcImc > 25 && calcImc < 29.9){
+  } else if(calcImc >= 25 && calcImc < 30){
     print("Sobrepeso");
-  } else if(calcImc > 30 && calcImc < 34.9){
+  } else if(calcImc >= 30 && calcImc < 35){
     print("Obesidade grau 1");
-  } else if(calcImc > 35 && calcImc < 39.9){
+  } else if(calcImc >= 35 && calcImc < 40){
     print("Obesidade grau 2");
   } else {
     print("Obesidade grau 3");
