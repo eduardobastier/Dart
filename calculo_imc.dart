@@ -15,8 +15,8 @@ if (peso != null){
   double? altura = double.tryParse(textAltura!);
 
 if (altura != null){
-  double calcImc = peso / (altura * altura);  
-  imprimirResultado(calcImc);
+  double imc = peso / (altura * altura);  
+  imprimirResultado(imc);
   } else {
       print("Altura inválida.");
     }
@@ -25,22 +25,22 @@ if (altura != null){
   }
 }
 
-imprimirResultado(calcImc){
+imprimirResultado(imc){
     print("===========================");
 
-  if (calcImc < 16){
+  if (imc < 16){
     print("Magreza grave");
-  } else if(calcImc >= 16 && calcImc <17){
+  } else if(imc >= 16 && imc <17){
     print("Magreza moderada");
-  } else if(calcImc >= 17 && calcImc <18.5){
+  } else if(imc >= 17 && imc <18.5){
     print("Magreza leve");
-  } else if(calcImc >= 18.5 && calcImc < 25){
+  } else if(imc >= 18.5 && imc < 25){
     print("Peso normal");
-  } else if(calcImc >= 25 && calcImc < 30){
+  } else if(imc >= 25 && imc < 30){
     print("Sobrepeso");
-  } else if(calcImc >= 30 && calcImc < 35){
+  } else if(imc >= 30 && imc < 35){
     print("Obesidade grau 1");
-  } else if(calcImc >= 35 && calcImc < 40){
+  } else if(imc >= 35 && imc < 40){
     print("Obesidade grau 2");
   } else {
     print("Obesidade grau 3");
